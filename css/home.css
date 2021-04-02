@@ -7,6 +7,10 @@ img.image1{
     width: 50;
 }
 
+.sample{
+    width: 50px;
+}
+
 .resizeimage img{
     width: 50%;
 }
