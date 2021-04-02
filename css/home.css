@@ -6,3 +6,7 @@ h1{
 img.image1{
     width: 50;
 }
+
+.resizeimage img{
+    width: 50%;
+}
