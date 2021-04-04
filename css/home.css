@@ -60,7 +60,16 @@ html {
     .wrapper {
         margin-bottom: 70px;
     }
+
     .site-title {
         margin-top: 50px;
+    }
+
+    .img-verticle {
+        height: 400px;
+    }
+    
+    .img-hrizemn {
+        width: 400px;
     }
 }
