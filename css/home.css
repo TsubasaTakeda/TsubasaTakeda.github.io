@@ -1,9 +1,66 @@
-@media screen and (max-width: 600px) {
-    .site-title {
-        margin-top: 500px;
-    }
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
 }
 
-img.image1{
-    width: 500px;
+.img-verticle {
+    height: 600px;
+}
+
+.img-hrizemn {
+    width: 600px;
+}
+
+.wrapper {
+    max-width: 968px;
+    margin: 0 auto 130px auto;
+    font-size: 0.9rem;
+    padding: 0 4%;
+}
+
+.site-title {
+    line-height: 1px;
+}
+
+.site-title a {
+    display: block;
+}
+
+
+
+
+/*----------------------------------------
+ヘッダー
+----------------------------------------*/
+#header {
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    height: 270px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+#header ul {
+    display: flex;
+    padding: 10px 0;
+}
+
+#header li {
+    font-size: 0.9rem;
+    margin-left: 30px;
+}
+
+
+/*----------------------------------------
+スマホ用の設定
+----------------------------------------*/
+@media screen and (max-width: 600px) {
+    .wrapper {
+        margin-bottom: 70px;
+    }
+    .site-title {
+        margin-top: 50px;
+    }
 }

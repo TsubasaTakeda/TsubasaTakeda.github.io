@@ -11,14 +11,48 @@
     </head>
 
     <body>
-        <h1 class="site-title">MY page</h1>
-        <img src="./img/graduation_2021/tamutsuba.jpg" alt="たむつばつうぃんてっど" title="たむつばだぜ！" class="image1">
-        <h2>自己紹介</h2>
-        <ul>
-            <li>名前：武田翼</li>
-            <li>生年月日：1998年12月10日</li>
-            <li>東北大学大学院情報科学研究科</li>
-        </ul>
-        始めまして！
+        <header id="header">
+            <h1 class="site-title"><a href="index.html">ばさおのお部屋</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#diary">Diary</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="about" class="wrapper">
+            <h1>ばさおについて</h1>
+            <ul>
+                <li>名前：武田翼</li>
+                <li>生年月日：1998年12月10日</li>
+                <li>居場所：東北大学大学院情報科学研究科</li>
+            </ul>
+            <img src="./img/graduation_2021/tamutsuba.jpg" alt="たむつばつうぃんてっど" title="たむつばだぜ！" class="img-verticle">
+        </section>
+
+        <section id="news" class="wrapper">
+            <h1>ニューズ</h1>
+            <ul>
+                <li>2021/04/04：HTMLの楽しさに気づいてしまった今日この頃．</li>
+            </ul>
+        </section>
+
+        <section id="diary" class="wrapper">
+            <h1>にょっき</h1>
+            <ul>
+                <li>いずれ日記も書きたいなぁ</li>
+            </ul>
+        </section>
+
+        <section id="return" class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#header">Topに戻る</a></li>
+                </ul>
+            </nav>
+        </section>
+
     </body>
 </html>
