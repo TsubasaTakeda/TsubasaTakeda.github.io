@@ -4,11 +4,24 @@ html {
     font-size: 100%;
 }
 
+li {
+    list-style: none;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
 .img-verticle {
+    display: block;
     height: 600px;
 }
 
 .img-hrizemn {
+    display: block;
     width: 600px;
 }
 
@@ -25,6 +38,7 @@ html {
 
 .site-title a {
     display: block;
+    color: #24292e;
 }
 
 .sec-title {
@@ -41,6 +55,7 @@ html {
 #header {
     max-width: 960px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 270px;
     margin: 0 auto;
@@ -49,12 +64,20 @@ html {
 
 #header ul {
     display: flex;
-    padding: 10px 0;
+    padding: 0 auto;
 }
 
 #header li {
     font-size: 0.9rem;
     margin-left: 30px;
+}
+
+#header li a {
+    color: #24292e;
+}
+
+#header li a:hover {
+    opacity: 0.7;
 }
 
 /*----------------------------------------
@@ -69,12 +92,15 @@ News
 #news dt {
     width: 20%;
     border-bottom: solid 1px #c8c8c8;
-    padding: 15px;
+    padding: 15px 0%;
+    margin: 0%;
+    text-align: center;
 }
 #news dd {
     width: 80%;
     border-bottom: solid 1px #c8c8c8;
-    padding: 15px;
+    padding: 15px 0%;
+    margin: 0%;
 }
 
 
@@ -97,4 +123,24 @@ News
     .img-hrizemn {
         width: 400px;
     }
+
+    /*----------------------------------------
+    ヘッダー
+    ----------------------------------------*/
+    #header {
+        max-width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+
+    #header li {
+        font-size: 0.8rem;
+        margin-left: 20px;
+    }
+
+    #header li:first-child {
+        margin-left: 0;
+    }
+
 }

@@ -1,8 +1,6 @@
 TsubasaTakeda.github.io
-|--img
-|   |-tamutsuba.jpg
-|
-|--css
-|   |--home.css
-|
-|--index.html
+- index.html
+- img
+    - tamutsuba.jpg
+- css
+    - home.css
