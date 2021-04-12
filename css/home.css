@@ -81,6 +81,29 @@ img {
 }
 
 /*----------------------------------------
+About
+----------------------------------------*/
+#about dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid 1px #c8c8c8;
+    margin-bottom: 20px;
+}
+#about dt {
+    width: 20%;
+    border-bottom: solid 1px #c8c8c8;
+    padding: 15px 2%;
+    margin: 0%;
+    text-align: center;
+}
+#about dd {
+    width: 76%;
+    border-bottom: solid 1px #c8c8c8;
+    padding: 15px 0%;
+    margin: 0%;
+}
+
+/*----------------------------------------
 News
 ----------------------------------------*/
 #news dl {
@@ -92,12 +115,12 @@ News
 #news dt {
     width: 20%;
     border-bottom: solid 1px #c8c8c8;
-    padding: 15px 0%;
+    padding: 15px 2%;
     margin: 0%;
     text-align: center;
 }
 #news dd {
-    width: 80%;
+    width: 76%;
     border-bottom: solid 1px #c8c8c8;
     padding: 15px 0%;
     margin: 0%;
