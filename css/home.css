@@ -126,6 +126,42 @@ News
     margin: 0%;
 }
 
+/*----------------------------------------
+Return
+----------------------------------------*/
+#return ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+#return li {
+    margin: auto;
+}
+
+
+/*----------------------------------------
+english_button
+----------------------------------------*/
+#english_button {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #585b5e;
+    border: solid 2px #585b5e;
+    border-radius: 3px;
+    transition: .4s;
+}
+#english_button:hover {
+    background: #585b5e;
+    color: white;  
+}
+
+
+
+
+
+
+
+
 
 /*----------------------------------------
 スマホ用の設定
