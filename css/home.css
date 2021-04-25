@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+
+:root {
+    --border_color: #c8c8c8;
+    --black: #24292e;
+}
+
+
 html {
     font-size: 100%;
 }
@@ -86,19 +93,19 @@ About
 #about dl {
     display: flex;
     flex-wrap: wrap;
-    border-top: solid 1px #c8c8c8;
+    border-top: solid 1px var(--border_color);
     margin-bottom: 20px;
 }
 #about dt {
     width: 20%;
-    border-bottom: solid 1px #c8c8c8;
+    border-bottom: solid 1px var(--border_color);
     padding: 15px 2%;
     margin: 0%;
     text-align: center;
 }
 #about dd {
     width: 76%;
-    border-bottom: solid 1px #c8c8c8;
+    border-bottom: solid 1px var(--border_color);
     padding: 15px 0%;
     margin: 0%;
 }
@@ -109,19 +116,19 @@ News
 #news dl {
     display: flex;
     flex-wrap: wrap;
-    border-top: solid 1px #c8c8c8;
+    border-top: solid 1px var(--border_color);
     margin-bottom: 20px;
 }
 #news dt {
     width: 20%;
-    border-bottom: solid 1px #c8c8c8;
+    border-bottom: solid 1px var(--border_color);
     padding: 15px 2%;
     margin: 0%;
     text-align: center;
 }
 #news dd {
     width: 76%;
-    border-bottom: solid 1px #c8c8c8;
+    border-bottom: solid 1px var(--border_color);
     padding: 15px 0%;
     margin: 0%;
 }
