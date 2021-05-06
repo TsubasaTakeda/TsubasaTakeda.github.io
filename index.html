@@ -36,8 +36,8 @@
         </section>
 
         <section id="news" class="wrapper">
-            <h2 class="sec-title">ニューズ</h2>
-            <dl>
+            <h2 class="sec-title">News</h2>
+            <dl id="news_contents">
                 <dt>2021.04.07</dt>
                 <dd>HTMLの楽しさに気づいてしまった今日この頃．</dd>
             </dl>
@@ -61,16 +61,6 @@
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script language="javascript" type="text/javascript">
-            url = 'json/diary/2021/diary_2021.json';
-            $.getJSON(url, function getData(data) {
-                var diary_data = data;
-                console.log('diary_data[0].data = ' + diary_data[0].date); 
-                var new_ele=document.createElement("p");
-                new_ele.innerHTML='<p>Today is' + diary_data[0].date + '</p>';
-                document.body.appendChild(new_ele);
-            });
-        </script>
         <script type="text/javascript" src="./js/main.js"></script>
     </body>
 </html>
