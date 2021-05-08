@@ -4,6 +4,7 @@
 :root {
     --border_color: #c8c8c8;
     --black: #24292e;
+    --footer: #c0c0c0;
 }
 
 
@@ -132,6 +133,41 @@ News
     padding: 15px 0%;
     margin: 0%;
 }
+
+/*----------------------------------------
+Diary
+----------------------------------------*/
+#diary dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid 1px var(--border_color);
+    margin-bottom: 20px;
+}
+#diary dt {
+    width: 20%;
+    border-bottom: solid 1px var(--border_color);
+    padding: 15px 2%;
+    margin: 0%;
+    text-align: center;
+}
+#diary dd {
+    width: 76%;
+    border-bottom: solid 1px var(--border_color);
+    padding: 15px 0%;
+    margin: 0%;
+}
+
+/*----------------------------------------
+Footer
+----------------------------------------*/
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--footer);
+    font-size: small;
+}
+
 
 /*----------------------------------------
 Return
