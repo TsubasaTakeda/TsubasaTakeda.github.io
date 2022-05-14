@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/study.css">
+    <title>武田翼のホームページ</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="container">
+            <a href="./index.html">
+                <div>ばさおの</div>
+                <div>部屋</div>
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./study.html">study</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="update">
+        <img src="./icon/header/update_black_24dp.svg" width="21px" height="21px">
+        <time id="modify"></time>
+        <script>
+            /* 更新日の取得 */
+            const last = new Date(document.lastModified);
+            const year = last.getFullYear();
+            const month = last.getMonth() + 1;
+            const date = last.getDate();
+            /* 日付を書き換える */
+            const target = document.getElementById('modify');
+            target.textContent = year + '-' + month + '-' + date;
+        </script>
+    </div>
+
+
+    <footer>
+        <div class="copyright">
+            © 2022 Tsubasa Takeda
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

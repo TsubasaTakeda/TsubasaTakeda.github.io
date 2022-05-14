@@ -1,73 +1,122 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <meta ettp-equiv="content-type" content="content-type:http;">
-        <meta http-equiv="default-style" content="css/home.css">
-        <meta name="description" content="武田翼のホームページです．">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="css/home.css">
-        <title>武田翼のホームページ</title>
-    </head>
 
-    <body>
-        <!-- header -->
-        <header id="header">
-            <h1 class="site-title"><a href="index.html">ばさおのお部屋</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#diary">Diary</a></li>
-                </ul>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>武田翼のホームページ</title>
+</head>
 
-        <!-- about -->
-        <section id="about" class="wrapper">
-            <h2 class="sec-title">ばさおについて</h2>
-            <dl>
-                <dt>名前</dt>
-                <dd>武田 翼 (Tsubasa Takeda)</dd>
-                <dt>生年月日</dt>
-                <dd>1998年12月10日</dd>
-                <dt>所属</dt>
-                <dd>東北大学情報科学研究科 人間社会情報科学専攻</dd>
-            </dl>
-            <img src="./img/graduation_2021/tamutsuba.jpg" alt="たむつばつうぃんてっど" title="たむつばだぜ！" class="img-verticle">
-        </section>
+<body>
 
-        <!-- news -->
-        <section id="news" class="wrapper">
-            <h2 class="sec-title">News</h2>
-            <dl id="news_contents">
-            </dl>
-        </section>
+    <header>
+        <h1 class="container">
+            <a href="./index.html">
+                ばさおの部屋
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./study.html">study</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- diary -->
-        <section id="diary" class="wrapper">
-            <h2 class="sec-title">Diary</h2>
-            <dl id="diary_contents">
-            </dl>
-        </section>
-
-        <!-- return_button -->
-        <section id="return" class="wrapper">
-            <nav>
-                <ul>
-                    <li><a href="#header">Topに戻る</a></li>
-                    <li><a href="#" id="english_button">English</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <!-- footer -->
-        <footer id="footer">
-            <p>© 2021 TsubasaTakeda</p>
-        </footer>
+    <div class="update">
+        <img src="./icon/header/update_black_24dp.svg" width="21px" height="21px">
+        <time id="modify"></time>
+        <script>
+            /* 更新日の取得 */
+            const last = new Date(document.lastModified);
+            const year = last.getFullYear();
+            const month = last.getMonth() + 1;
+            const date = last.getDate();
+            /* 日付を書き換える */
+            const target = document.getElementById('modify');
+            target.textContent = year + '-' + month + '-' + date;
+        </script>
+    </div>
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type="text/javascript" src="./js/main.js"></script>
-    </body>
+
+
+
+    <h2>
+        プロフィール
+    </h2>
+
+    <section>
+
+        <div class="profile">
+            <div class="item">
+                <p class="pro_title">名前</p>
+                <p class="pro_content">武田 翼 (Tsubasa Takeda)</p>
+            </div>
+            <div class="item">
+                <p class="pro_title">所属</p>
+                <p class="pro_content">
+                    東北大学大学院情報科学研究科
+                    人間社会情報科学専攻 修士2年
+                </p>
+                <p class="pro_content">
+                    <a href="http://www.plan.civil.tohoku.ac.jp/~trafficlab/rtt/">交通制御学研究室</a>
+                </p>
+            </div>
+            <div class="item">
+                <p class="pro_title">連絡先等</p>
+                <p class="pro_content">
+                    <img src="./icon/bootstrap/icons-1.8.0/icons/envelope.svg">
+                    ：tsubasa.takeda.t5@dc.tohoku.ac.jp
+                </p>
+                <p class="pro_content">
+                    <img src="./icon/bootstrap/icons-1.8.0/icons/telephone.svg">
+                    ：080-9011-7781
+                </p>
+                <p class="pro_content">
+                    <a
+                        href="https://www.google.com/maps/place/%E6%9D%B1%E5%8C%97%E5%A4%A7%E5%AD%A6+%E4%BA%BA%E9%96%93%E3%83%BB%E7%92%B0%E5%A2%83%E7%B3%BB+%E6%95%99%E8%82%B2%E7%A0%94%E7%A9%B6%E6%A3%9F/@38.2550539,140.8385891,14z/data=!4m5!3m4!1s0x0:0x353cf4c83a318ba0!8m2!3d38.2550543!4d140.838589?hl=ja-JP">
+                        <img src="./icon/bootstrap/icons-1.8.0/icons/geo-alt.svg">
+                        ：宮城県仙台市青葉区荒巻字青葉 6-6-06
+                        人間・環境系教育研究棟 408 交通制御学研究室
+                    </a>
+                </p>
+                <p class="pro_content">
+                    <a href="https://github.com/TsubasaTakeda">
+                        <img src="./icon/bootstrap/icons-1.8.0/icons/github.svg">
+                        ：TsubasaTakeda(Githubページ)
+                    </a>
+                </p>
+            </div>
+            <div class="item">
+                <p class="pro_title">これまでの成果</p>
+                <p class="pro_content">
+                    査読付き論文：0件
+                </p>
+                <p class="pro_content">
+                    学会発表：3件
+                </p>
+            </div>
+        </div>
+
+        <div class="profile_img">
+            <img src="./img/about/tamutsuba.jpg" alt="たむつばの写真" title="たむつばだぜ！" width="100%">
+        </div>
+
+    </section>
+
+
+
+    <footer>
+        <div class="copyright">
+            © 2022 Tsubasa Takeda
+        </div>
+    </footer>
+
+
+</body>
+
 </html>
