@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./icon/bootstrap/icons-1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./icon/fontawsome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <title>武田翼のホームページ</title>
 </head>
 
 
 <body>
+
+    <script src="./javascript/main.js" defer></script>
 
     <header class="ly_header">
         <div class="ly_header_inner">
@@ -131,7 +136,8 @@
                 <p><span class="el_beforeIcon el_beforeIcon__excel"><a href="#">ファイル名.xlsx</a></span></p>
                 <p><span class="el_beforeIcon el_beforeIcon__pp"><a href="#">ファイル名.pptx</a></span></p>
                 <p><span class="el_beforeIcon el_beforeIcon__img"><a href="#">ファイル名.png</a></span></p>
-                <p><span class="el_beforeIcon el_beforeIcon__code"><a href="#">ファイル名.py</a></span></p>
+                <p><span class="el_beforeIcon el_beforeIcon__codeFile"><a href="#">ファイル名.py</a></span></p>
+                <p><span class="el_beforeIcon el_beforeIcon__code">コード</span></p>
                 <p><span class="el_beforeIcon el_beforeIcon__checkSquare">チェック項目</span></p>
                 <p><span class="el_beforeIcon el_beforeIcon__mail">メールアドレス</span></p>
                 <p><span class="el_beforeIcon el_beforeIcon__phone">電話番号</span></p>
@@ -187,7 +193,7 @@
                 <div>
                     <h3 class="el_lv3Heading">順序あり（逆順 & 深いコンテンツ）</h3>
                     <div>
-                        <ol start="10" class="bl_thickList hp_reverseList">
+                        <ol class="bl_thickList hp_reverseList" id="ol_rev">
                             <li>コンテンツ</li>
                             <li>コンテンツ</li>
                             <li>
@@ -207,9 +213,292 @@
         </section>
 
 
+        <section class="ly_cont">
+            <h2 class="el_lv2Heading">
+                <span>06</span>コード
+            </h2>
+            <div class="bl_codeWrapper">
+                <span class="el_codeWrapper_rang">HTML</span>
+                <pre class="el_codeWrapper_code"><code>&lt;pre&gt;&lt;code&gt;ここにソースコードを書く&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            </div>
+
+            <div class="bl_codeWrapper">
+                <span class="el_codeWrapper_rang">Python</span>
+                <pre class="el_codeWrapper_code"><code>@requires_authorization(roles=["ADMIN"])
+def somefunc(param1='', param2=0):
+r'''A docstring'''
+if param1 > param2: # interesting
+print 'Gre\'ater'
+return (param2 - param1 + 1 + 0b10l) or None
+
+class SomeClass:
+pass
+
+>>> message = '''interpreter
+... prompt'''</code></pre>
+            </div>
+        </section>
 
 
-        
+        <section class="ly_cont">
+            <h2 class="el_lv2Heading">
+                <span>07</span>メディア
+            </h2>
+            <div>
+                <div class="bl_media">
+                    <figure class="bl_media_imgWrapper">
+                        <img src="./img/styleGuide/sunFlower.jpg" alt="写真：ひまわり">
+                    </figure>
+                    <div class="bl_media_body">
+                        <h3 class="bl_media_ttl">
+                            ひまわりの気持ちになろう
+                        </h3>
+                        <p class="bl_media_txt">
+                            ひまわりはご存じだろうか．
+                            ひまわりはおいしい．
+                            ひまわりは楽しい．
+                            ひまわりははは．
+                            ほげーげほげほげほげほげほ，ほげげげげげほ．<br>
+                            きょうは，ヒマワリについて学習することにしましょう．
+                        </p>
+                    </div>
+                </div>
+                <div class="bl_media bl_media__rev">
+                    <figure class="bl_media_imgWrapper">
+                        <img src="./img/styleGuide/sunFlower.jpg" alt="写真：ひまわり">
+                    </figure>
+                    <div class="bl_media_body">
+                        <h3 class="bl_media_ttl">
+                            ひまわりの気持ちになろう
+                        </h3>
+                        <p class="bl_media_txt">
+                            ひまわりはご存じだろうか．
+                            ひまわりはおいしい．
+                            ひまわりは楽しい．
+                            ひまわりははは．
+                            ほげーげほげほげほげほげほ，ほげげげげげほ．<br>
+                            きょうは，ヒマワリについて学習することにしましょう．
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bl_media bl_media__half">
+                    <figure class="bl_media_imgWrapper">
+                        <img src="./img/styleGuide/sunFlower.jpg" alt="写真：ひまわり">
+                    </figure>
+                    <div class="bl_media_body">
+                        <h3 class="bl_media_ttl">
+                            ひまわりの気持ちになろう
+                        </h3>
+                        <p class="bl_media_txt">
+                            ひまわりはご存じだろうか．
+                            ひまわりはおいしい．
+                            ひまわりは楽しい．
+                            ひまわりははは．
+                            ほげーげほげほげほげほげほ，ほげげげげげほ．<br>
+                            きょうは，ヒマワリについて学習することにしましょう．
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bl_media bl_media__half bl_media__rev">
+                    <figure class="bl_media_imgWrapper">
+                        <img src="./img/styleGuide/sunFlower.jpg" alt="写真：ひまわり">
+                    </figure>
+                    <div class="bl_media_body">
+                        <h3 class="bl_media_ttl">
+                            ひまわりの気持ちになろう
+                        </h3>
+                        <p class="bl_media_txt">
+                            ひまわりはご存じだろうか．
+                            ひまわりはおいしい．
+                            ひまわりは楽しい．
+                            ひまわりははは．
+                            ほげーげほげほげほげほげほ，ほげげげげげほ．<br>
+                            きょうは，ヒマワリについて学習することにしましょう．
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ly_cont">
+            <h2 class="el_lv2Heading">
+                <span>08</span>カード
+            </h2>
+            <div>
+                <div>
+                    <h3 class="el_lv3Heading">単独カード</h3>
+                    <div class="bl_card">
+                        <figure class="bl_card_imgWrapper">
+                            <img src="./img/styleGuide/sunFlower.jpg">
+                        </figure>
+                        <div class="bl_card_body">
+                            <h4 class="bl_card_ttl">ヒマワリの育て方</h4>
+                            <p class="bl_card_txt">
+                                美しいヒマワリの作り方を伝授します．
+                                あなたもぜひ体験してみては？
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bl_card">
+                        <b class="bl_card_badge">
+                            <span class="bl_card_badge_txt">NEW</span>
+                        </b>
+                        <figure class="bl_card_imgWrapper">
+                            <img src="./img/styleGuide/sunFlower.jpg">
+                        </figure>
+                        <div class="bl_card_body">
+                            <h4 class="bl_card_ttl">ヒマワリの育て方</h4>
+                            <p class="bl_card_txt">
+                                美しいヒマワリの作り方を伝授します．
+                                あなたもぜひ体験してみては？
+                            </p>
+                        </div>
+                    </div>
+                    <a class="bl_card" href="#">
+                        <b class="bl_card_badge">
+                            <span class="bl_card_badge_txt">NEW</span>
+                        </b>
+                        <figure class="bl_card_imgWrapper">
+                            <img src="./img/styleGuide/sunFlower.jpg">
+                        </figure>
+                        <div class="bl_card_body">
+                            <h4 class="bl_card_ttl">ヒマワリの育て方</h4>
+                            <p class="bl_card_txt">
+                                美しいヒマワリの作り方を伝授します．
+                                あなたもぜひ体験してみては？
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <h3 class="el_lv3Heading">3列カード</h3>
+                    <div class="bl_cardUnit bl_cardUnit__col3">
+                        <a class="bl_card" href="#">
+                            <b class="bl_card_badge">
+                                <span class="bl_card_badge_txt">NEW</span>
+                            </b>
+                            <figure class="bl_card_imgWrapper">
+                                <img src="./img/styleGuide/sunFlower.jpg">
+                            </figure>
+                            <div class="bl_card_body">
+                                <h4 class="bl_card_ttl">ヒマワリの育て方</h4>
+                                <p class="bl_card_txt">
+                                    美しいヒマワリの作り方を伝授します．
+                                    あなたもぜひ体験してみては？
+                                </p>
+                            </div>
+                        </a>
+                        <a class="bl_card" href="#">
+                            <figure class="bl_card_imgWrapper">
+                                <img src="./img/styleGuide/sunFlower.jpg">
+                            </figure>
+                            <div class="bl_card_body">
+                                <h4 class="bl_card_ttl">ヒマワリの育て方</h4>
+                                <p class="bl_card_txt">
+                                    美しいヒマワリの作り方を伝授します．
+                                    あなたもぜひ体験してみては？
+                                </p>
+                            </div>
+                        </a>
+                        <a class="bl_card" href="#">
+                            <figure class="bl_card_imgWrapper">
+                                <img src="./img/styleGuide/sunFlower.jpg">
+                            </figure>
+                            <div class="bl_card_body">
+                                <h4 class="bl_card_ttl">ヒマワリの育て方</h4>
+                                <p class="bl_card_txt">
+                                    美しいヒマワリの作り方を伝授します．
+                                    あなたもぜひ体験してみては？
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="el_lv3Heading">4列カード</h3>
+                        <div class="bl_cardUnit bl_cardUnit__col4">
+                            <a class="bl_card" href="#">
+                                <b class="bl_card_badge">
+                                    <span class="bl_card_badge_txt">NEW</span>
+                                </b>
+                                <figure class="bl_card_imgWrapper">
+                                    <img src="./img/styleGuide/sunFlower.jpg">
+                                </figure>
+                                <div class="bl_card_body">
+                                    <h4 class="bl_card_ttl">ヒマワリの育て方</h4>
+                                    <p class="bl_card_txt">
+                                        美しいヒマワリの作り方を伝授します．
+                                        あなたもぜひ体験してみては？
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="bl_card" href="#">
+                                <figure class="bl_card_imgWrapper">
+                                    <img src="./img/styleGuide/sunFlower.jpg">
+                                </figure>
+                                <div class="bl_card_body">
+                                    <h4 class="bl_card_ttl">ヒマワリの育て方</h4>
+                                    <p class="bl_card_txt">
+                                        美しいヒマワリの作り方を伝授します．
+                                        あなたもぜひ体験してみては？
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="bl_card" href="#">
+                                <figure class="bl_card_imgWrapper">
+                                    <img src="./img/styleGuide/sunFlower.jpg">
+                                </figure>
+                                <div class="bl_card_body">
+                                    <h4 class="bl_card_ttl">ヒマワリの育て方</h4>
+                                    <p class="bl_card_txt">
+                                        美しいヒマワリの作り方を伝授します．
+                                        あなたもぜひ体験してみては？
+                                    </p>
+                                </div>
+                            </a>
+                            <a class="bl_card" href="#">
+                                <figure class="bl_card_imgWrapper">
+                                    <img src="./img/styleGuide/sunFlower.jpg">
+                                </figure>
+                                <div class="bl_card_body">
+                                    <h4 class="bl_card_ttl">ヒマワリの育て方</h4>
+                                    <p class="bl_card_txt">
+                                        美しいヒマワリの作り方を伝授します．
+                                        あなたもぜひ体験してみては？
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ly_cont">
+            <h2 class="el_lv2Heading">
+                <span>09</span>FAQ
+            </h2>
+            <div>
+                <dl class="bl_faq">
+                    <dt class="bl_faq_q">
+                        <span class="bl_faq_icon">Q</span>
+                        <span class="bl_faq_q_txt">これは一体どうすれば良いのでしょうか？</span>
+                    </dt>
+                    <dd class="bl_faq_a">
+                        <span class="bl_faq_icon">A</span>
+                        <div class="bl_faq_a_body">
+                            <p class="bl_faq_a_txt">
+                                こんな感じでやるのが良いと思いますよ．
+                                実際，私もこれで上手くいきました．
+                                これからもどうぞよろしくお願いいたします．<br>
+                                私も楽しみにしています．
+                            </p>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </section>
 
     </main>
 
