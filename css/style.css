@@ -637,6 +637,18 @@ a.bl_card:hover .bl_card_txt {
 
 
 /* ------------------------------------------------------------ 
+    ニュースリスト
+-------------------------------------------------------------*/
+.bl_newsList {
+    margin-top: 0;
+}
+.el_newsContent {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+/* ------------------------------------------------------------ 
     ヘルパー
 -------------------------------------------------------------*/
 
@@ -648,6 +660,11 @@ a.bl_card:hover .bl_card_txt {
 ol.hp_reverseList > li::before {
     counter-increment: ol -1;
     content: counter(ol)'.';
+}
+
+.hp_attention {
+    color: #ff0000;
+    font-weight: bold;
 }
 
 
