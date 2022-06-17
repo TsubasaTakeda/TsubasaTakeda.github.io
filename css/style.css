@@ -472,11 +472,11 @@ code {
 /* カード */
 .bl_card {
     display: inline-block;
-    
     box-shadow: 0 3px 6px #00000055;
 }
 .bl_card_imgWrapper {
     position: relative;
+    margin: 0;
     padding-top: 56.25%;
     overflow: hidden;
 }
@@ -538,13 +538,15 @@ a.bl_card {
 }
 a.bl_card:focus,
 a.bl_card:hover {
-    opacity: .75;
+    /* opacity: .8; */
+    box-shadow: 0 3px 20px #00000055;
+    transform: scale(1.02);
 }
 a.bl_card:focus .bl_card_ttl,
 a.bl_card:focus .bl_card_txt,
 a.bl_card:hover .bl_card_ttl,
 a.bl_card:hover .bl_card_txt {
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .bl_cardUnit {
