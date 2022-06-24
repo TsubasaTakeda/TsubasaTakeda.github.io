@@ -15,9 +15,9 @@ export function printCommonItem(onNavList) {
 
 }
 
-function printHead() {
+export function printHead() {
     let head = new Promise(function (resolve) {
-        fetch("./../commonItem/head.html")
+        fetch("https://tsubasatakeda.github.io/commonItem/head.html")
         .then(function (response) {
             return response.text();
         })
@@ -29,9 +29,9 @@ function printHead() {
     return head;
 }
 
-function printHeader() {
+export function printHeader() {
     let header = new Promise(function (resolve) {
-        fetch("./../commonItem/header.html")
+        fetch("https://tsubasatakeda.github.io/commonItem/header.html")
         .then(function (response) {
             return response.text();
         })
@@ -49,9 +49,9 @@ function printHeader() {
     return header;
 };
 
-function printFooter() {
+export function printFooter() {
     let footer = new Promise(function (resolve) {
-        fetch("./../commonItem/footer.html")
+        fetch("https://tsubasatakeda.github.io/commonItem/footer.html")
         .then(response => {
             return response.text();
         })

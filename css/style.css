@@ -352,8 +352,15 @@ code {
 }
 
 
+/* 参考文献 */
+.el_journal {
+    font-style: italic;
+}
 
-
+/* 数式 */
+.el_math {
+    line-height: 0;
+}
 
 
 
@@ -635,6 +642,46 @@ a.bl_card:hover .bl_card_txt {
 }
 .bl_faq_a_txt {
     margin-bottom: 20px;
+}
+
+/* 参考文献 */
+.bl_biblio > ol > li {
+    line-height: 1.5;
+}
+.bl_biblio > ol > li::before {
+    content: '['counter(ol)']';
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    color: #202020;
+    font-weight: normal;
+    counter-increment: ol;
+}
+.bl_biblio > ol > li > a {
+    text-decoration: none;
+}
+
+/* アルゴリズム */
+.bl_algorithm {
+    padding: 1em 2em;
+    border-top: solid 5px #202020dd;
+    box-shadow: 0 3px 5px #202020dd;
+    
+}
+.bl_algorithm > ol > li {
+    padding: 2em 2em 1em;
+}
+.bl_algorithm > ol > li::before {
+    content: 'Step' counter(ol) '.';
+    position: absolute;
+    font-size: large;
+    top: 0;
+    /* left: 1rem; */
+    color: #202020;
+    counter-increment: ol;
+}
+.bl_algorithm > ol > li:last-child{
+    padding-bottom: 0.5em;
 }
 
 
