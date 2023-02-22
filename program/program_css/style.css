@@ -1,0 +1,166 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 200px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+div {
+    margin-top: 20px;
+    line-height: 1.75em;
+}
+
+h1 {
+    margin-top: 3.0em;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+a {
+    text-decoration: none;
+    color: #4499ff;
+}
+a:hover {
+    text-decoration: underline;
+    color: #1177ee;
+}
+
+/* Header */
+.ly_header {
+    background-color: #eeeeee;
+    margin: 0;
+}
+.ly_header_inner {
+    max-width: 1020px;
+    padding: 0 4vw;
+    margin: auto;
+}
+
+/* Navigation */
+.bl_tabNav_inner {
+    display: flex;
+}
+.bl_tabNav_link {
+    padding: 20px 15px;
+    display: inline-block;
+    color: #666666;
+    font-size: 12px;
+    text-decoration: none;
+}
+.bl_tabNav_link:hover {
+    color: #444444;
+    font-weight: 600;
+}
+.bl_tabNav_link.is__active {
+    background-color: #e0e0e0;
+}
+
+/* main */
+.ly_main {
+    max-width: 1020px;
+    padding: 0 4vw;
+    margin: auto;
+}
+
+/* contents */
+.ly_contWrapper {
+    display: flex;
+    margin-top: 3.0em;
+}
+.ly_conts {
+    margin-top: 0;
+}
+.bl_cont {
+    margin-top: 5.0em;
+}
+.bl_cont:first-child {
+    margin-top: 0em;
+}
+.bl_cont > h2 {
+    font-size: 1.25rem;
+    padding: 0.4em 0 0.2em 0.3em;
+    border-bottom: 1.5px solid #bbbbbb;
+    border-left: 1em solid #bbbbbb;
+}
+.bl_cont_txt {
+    padding-left: 2.0em;
+    font-size: 0.75rem;
+}
+.bl_cont_txt > ul {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 1.5em;
+}
+/* ul in ul */
+.ly_ul2 {
+    margin-left: 1.05rem;
+    margin-bottom: 0.5em;
+}
+
+
+/* ページ内リンク */
+.bl_pageCT {
+    margin: 0;
+    margin-right: 2.0rem;
+    padding: 0;
+    min-width: 10rem;
+    border: 1px solid #cccccc;
+    font-size: 0.75rem;
+    height: fit-content;
+}
+.bl_pageCT > ul > li {
+    list-style: none;
+    margin: 0;
+    padding: 1.0rem 1.0rem;
+    border-bottom: 1px solid #cccccc;
+}
+.bl_pageCT > ul > li:last-child {
+    border-bottom: none;
+}
+
+/* FAQ */
+.bl_faq {
+    padding-top: 40px;
+}
+.bl_faq:first-child {
+    padding-top: 15px;
+}
+.bl_faq_q,
+.bl_faq_a {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: content-box;
+    min-height: 3.0em;
+    padding-left: 3.5em;
+}
+.bl_faq_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    font-weight: normal;
+    line-height: 2.6em;
+    text-align: center;
+    font-weight: 600;
+}
+.bl_faq_q .bl_faq_icon {
+    background-color: #202020;
+    color: #ffffff;
+}
+.bl_faq_a .bl_faq_icon {
+    background-color: #cccccc;
+    color: #202020;
+}
+.bl_faq_q_txt {
+    font-weight: bold;
+    padding-top: 0.5em;
+}
+.bl_faq_a_txt {
+    padding-top: 0.5em;
+}
