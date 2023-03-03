@@ -362,20 +362,6 @@ code {
     line-height: 0;
 }
 
-/* 定理 */
-.el_theorem {
-    /* margin: 30px 50px; */
-    padding: 2rem 5rem;
-    border: 2px solid #202020
-}
-
-/* 証明 */
-.el_proof {
-    /* margin: 30px 50px;
-    padding: 2rem 5rem; */
-}
-
-
 
 
 
