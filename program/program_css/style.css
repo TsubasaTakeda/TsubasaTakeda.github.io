@@ -92,7 +92,7 @@ a:hover {
 .bl_cont_txt {
     padding-left: 2.0em;
     font-size: 0.75rem;
-    width: 100%;
+    width: calc(100% - 2.0em);
 }
 .bl_cont_txt > ul {
     margin-top: 0.5em;
@@ -132,25 +132,23 @@ a:hover {
 /* code  */
 .bl_codeWrapper {
     font-size: 0.75rem;
+    max-width: 100%;
 }
 .bl_codeWrapper>.el_codeWrapper_rang {
     display: inline-block;
     text-align: center;
     margin: 0;
     padding: 0.2rem 0.75rem;
-    background-color: #666666;
+    background-color: #272822;
     color: #ffffff;
     font-size: 0.75rem;
+    border-radius: .3em;
 }
 .bl_codeWrapper>.el_codeWrapper_rang::before {
     content: '\F2C6';
     font-family: 'bootstrap-icons';
     width: 1rem;
     margin-right: .3rem;
-}
-.bl_codeWrapper>.el_codeWrapper_code {
-    margin-top: 0;
-    border: 1px solid #666666;
 }
 
 /* FAQ */

@@ -1,123 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>MSWiki</title>
-    <link rel="stylesheet" href="./../../program_css/reset.css">
-    <link rel="stylesheet" href="./../../program_css/style.css">
-    <link rel="stylesheet" href="./../../../icon/bootstrap/icons-1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./../../program_css/prism.css">
-    <script src="./../../program_js/prism.js"></script>
-</head>
-
-
-<body>
-
-    <header class="ly_header">
-        <div class="ly_header_inner">
-            <nav class="bl_tabNav">
-                <ul class="bl_tabNav_inner">
-                    <li><a class="bl_tabNav_link" href="./../../index.html">ホーム</a></li>
-                    <li><a class="bl_tabNav_link is__active" href="./../../CSDprogram.html">CSDプログラム</a></li>
-                    <li><a class="bl_tabNav_link" href="./../../MSprogram.html">MSプログラム</a></li>
-                    <li><a class="bl_tabNav_link" href="./../../FAQ.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="ly_main">
-
-        <h1>加速射影勾配法(FISTA with Backtracking)</h1>
-
-        <div class="ly_contWrapper">
-
-            <div class="bl_pageCT">
-                <ul>
-                    <li><a href="#purpose">コードの目的</a></li>
-                    <li><a href="#module">必要モジュール</a></li>
-                    <li><a href="#input">入力</a></li>
-                    <li><a href="#output">出力</a></li>
-                    <li><a href="#code">コード</a></li>
-                    <li><a href="#example">使用例</a></li>
-                </ul>
-            </div>
-
-            <div class="ly_conts">
-
-                <div class="bl_cont" id="purpose">
-                    <h2>コードの目的</h2>
-                    <div class="bl_cont_txt">
-                        <ul>
-                            <li>制約付き最小化問題を解く (任意の解を許容領域内に射影可能な場合のみ適用可能) ．</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="bl_cont" id="module">
-                    <h2>必要モジュール</h2>
-                    <div class="bl_cont_txt">
-                        <ul>
-                            <li><a href="https://numpy.org/">NumPy</a></li>
-                            <li><a href="https://pandas.pydata.org/">Pandas</a></li>
-                            <li><a href="https://docs.python.org/ja/3/library/time.html">time</a></li>
-                            <li><a href="https://www.sqlalchemy.org/">sqlalchemy</a></li>
-                            <li><a href="https://docs.python.org/ja/3/library/os.html">os</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="bl_cont" id="input">
-                    <h2>入力</h2>
-                    <div class="bl_cont_txt">
-
-                        <ul>
-                            <li>目的関数(必須)：function:obj_func．入力が [ndarray:x] で，出力が [float:obj, float:time] の関数．</li>
-                            <li>勾配関数(必須)：function:nbl_func．入力が [ndarray:x] で，出力が [ndarray:nbl, float:time] の関数．</li>
-                            <li>射影関数(必須)：function:proj_func．入力が [ndarray:x] で，出力が [ndarray:x, float:time] の関数．</li>
-                            <li>初期解(必須)：ndarray:x</li>
-                            <li>初期リプシッツ定数(必須)：float:lips_init</li>
-                            <li>収束判定値(必須)：float:conv_judge</li>
-                            <li>出力頻度：int:output_iter．デフォルトは100．</li>
-                            <li>出力url：str:output_url．デフォルトは設定なし．</li>
-                        </ul>
-                
-                    </div>
-                </div>
-
-                <div class="bl_cont" id="output">
-                    <h2>出力</h2>
-                    <div class="bl_cont_txt">
-
-                        <ul>
-                            <li>
-                                計算結果：pandas.DataFrame:output_data
-                                <ul class="ly_ul2">
-                                    <li>iteration：int．反復回数．</li>
-                                    <li>time：float．累計処理時間(elapse time)．</li>
-                                    <li>now_obj：float．目的関数値．</li>
-                                    <li>now_conv：float．収束判定値．</li>
-                                    <li>now_lips：float．リプシッツ定数．</li>
-                                    <li>num_call_obj：int．目的関数の呼び出し回数．</li>
-                                    <li>num_call_nbl：int．勾配関数の呼び出し回数．</li>
-                                    <li>num_call_proj：int．射影関数の呼び出し回数．</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="bl_cont" id="code">
-                    <h2>コード</h2>
-                    <div class="bl_cont_txt">
-
-
-                        <div class="bl_codeWrapper">
-                            <span class="el_codeWrapper_rang">Python</span>
-                            <pre class="line-numbers"><code class="language-python">import numpy as np
+import numpy as np
 import time
 import os
 from sqlalchemy import null
@@ -385,20 +266,9 @@ class FISTA_PROJ_BACK:
         total_time += end_time - start_time
 
         return [self.back_para**iota*now_lips, num_call_obj, num_call_nbl, num_call_proj, total_time]
-</code></pre>
-                            
-                        </div>
 
-                    </div>
-                </div>
 
-                <div class="bl_cont" id="example">
-                    <h2>使用例</h2>
-                    <div class="bl_cont_txt">
-
-                        <div class="bl_codeWrapper">
-                            <span class="el_codeWrapper_rang">Python</span>
-                            <pre class="line-numbers"><code class="language-python"># 目的関数
+# 目的関数
 def obj_func(x):
     start_time = time.process_time()
     obj = 0
@@ -459,19 +329,3 @@ fista_proj_back.set_output_root("./result")
 
 # 最適化実行
 fista_proj_back.exect_FISTA_proj_back()
-</code></pre>
-                        </div>
-                
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </main>
-
-
-</body>
-
-</html>
