@@ -74,6 +74,7 @@ a:hover {
 .ly_conts {
     margin-top: 0;
     margin-left: 12rem;
+    min-width: calc(100% - 12rem);
     max-width: calc(100% - 12rem);
 }
 .bl_cont {
@@ -193,4 +194,10 @@ a:hover {
 }
 .bl_faq_a_txt {
     padding-top: 0.5em;
+}
+
+
+/* helper */
+.hp_bold { 
+    font-weight: 600;
 }

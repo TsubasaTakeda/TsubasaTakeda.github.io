@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>MSWiki</title>
-    <link rel="stylesheet" href="./../../program_css/reset.css">
-    <link rel="stylesheet" href="./../../program_css/style.css">
-    <link rel="stylesheet" href="./../../../icon/bootstrap/icons-1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./../../program_css/prism.css">
-    <script src="./../../program_js/prism.js"></script>
+    <link rel="stylesheet" href="./../../../program_css/reset.css">
+    <link rel="stylesheet" href="./../../../program_css/style.css">
+    <link rel="stylesheet" href="./../../../../icon/bootstrap/icons-1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./../../../program_css/prism.css">
+    <script src="./../../../program_js/prism.js"></script>
 </head>
 
 
@@ -19,9 +19,8 @@
             <nav class="bl_tabNav">
                 <ul class="bl_tabNav_inner">
                     <li><a class="bl_tabNav_link" href="./../../index.html">ホーム</a></li>
-                    <li><a class="bl_tabNav_link is__active" href="./../../CSDprogram.html">CSDプログラム</a></li>
-                    <li><a class="bl_tabNav_link" href="./../../MSprogram.html">MSプログラム</a></li>
-                    <li><a class="bl_tabNav_link" href="./../../FAQ.html">FAQ</a></li>
+                    <li><a class="bl_tabNav_link is__active" href="./../index.html">最適化</a></li>
+                    <li><a class="bl_tabNav_link" href="./../../transportation/index.html">交通量配分</a></li>
                 </ul>
             </nav>
         </div>
@@ -77,11 +76,13 @@
                             <li>目的関数(必須)：function:obj_func．入力が [ndarray:x] で，出力が [float:obj, float:time] の関数．</li>
                             <li>勾配関数(必須)：function:nbl_func．入力が [ndarray:x] で，出力が [ndarray:nbl, float:time] の関数．</li>
                             <li>射影関数(必須)：function:proj_func．入力が [ndarray:x] で，出力が [ndarray:x, float:time] の関数．</li>
+                            <li>収束判定値関数(必須)：function:conv_func．入力が [ndarray:x] で，出力が [float:conv, float:time] の関数．</li>
                             <li>初期解(必須)：ndarray:x</li>
                             <li>初期リプシッツ定数(必須)：float:lips_init</li>
                             <li>収束判定値(必須)：float:conv_judge</li>
+                            <li>Backtrackingパラメータ(必須)：float:back_para > 1.0</li>
                             <li>出力頻度：int:output_iter．デフォルトは100．</li>
-                            <li>出力url：str:output_url．デフォルトは設定なし．</li>
+                            <li>出力url：str:output_url．デフォルトは直下のディレクトリ．</li>
                         </ul>
                 
                     </div>
@@ -103,6 +104,7 @@
                                     <li>num_call_obj：int．目的関数の呼び出し回数．</li>
                                     <li>num_call_nbl：int．勾配関数の呼び出し回数．</li>
                                     <li>num_call_proj：int．射影関数の呼び出し回数．</li>
+                                    <li>num_call_conv：int．収束判定値関数の呼び出し回数．</li>
                                 </ul>
                             </li>
                         </ul>
@@ -403,7 +405,10 @@ def obj_func(x):
     start_time = time.process_time()
     obj = 0
     for i in range(len(x)):
-        obj += (x[i] - 5.0)**2
+        if i % 3 == 0:
+            obj += (x[i] + 2.0)**2
+        else:
+            obj += (x[i] - 5.0)**2
     end_time = time.process_time()
     return obj, end_time-start_time
 
@@ -411,6 +416,9 @@ def obj_func(x):
 def nbl_func(x):
     start_time = time.process_time()
     nbl_vec = x*2.0 - 10.0
+    for i in range(len(x)):
+        if i % 3 == 0:
+            nbl_vec[i] = x[i]*2.0 + 4.0
     end_time = time.process_time()
     return nbl_vec, end_time-start_time
 
